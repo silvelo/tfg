@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: memoria_tfg.aux
+A level-1 auxiliary file: portada/portada.aux
+A level-1 auxiliary file: portada/resumo.aux
+A level-1 auxiliary file: contido/introducion.aux
+A level-1 auxiliary file: contido/estado.aux
+A level-1 auxiliary file: contido/alternativas.aux
+A level-1 auxiliary file: contido/planificación.aux
+A level-1 auxiliary file: contido/tecnologias.aux
+A level-1 auxiliary file: contido/metodologia.aux
+A level-1 auxiliary file: contido/pruebas.aux
+A level-1 auxiliary file: contido/ia.aux
+A level-1 auxiliary file: contido/resultados.aux
+A level-1 auxiliary file: contido/futuro.aux
+A level-1 auxiliary file: contido/conclusions.aux
+A level-1 auxiliary file: anexos/restapi.aux
+A level-1 auxiliary file: anexos/aplicación.aux
+The style file: IEEEtran.bst
+Database file #1: bibliografia/bibconf-es.bib
+Database file #2: bibliografia/bibliografia.bib
+Warning--entry type for "eurostat" isn't style-file defined
+--line 423 of file bibliografia/bibliografia.bib
+Warning--entry type for "conceptos_rediris" isn't style-file defined
+--line 428 of file bibliografia/bibliografia.bib
+Warning--entry type for "objetivos_rediris" isn't style-file defined
+--line 433 of file bibliografia/bibliografia.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+** IEEEtran BST control entry "IEEEexample:BSTcontrol" detected.
+Warning--empty author in shazam
+Warning--empty journal in shazam
+Warning--empty year in shazam
+Warning--empty journal in daniel_garabato
+Warning--empty journal in jorge_rodriguez
+Too many commas in name 1 of "Doug Schepers, Sangwhan Moon, Matt Brubeck, Arthur Barstow" for entry touch_events
+while executing---line 2403 of file IEEEtran.bst
+Warning--empty journal in jhonmccarthy
+Warning--empty year in jhonmccarthy
+Warning--empty journal in arhtursamuel
+Warning--empty year in arhtursamuel
+Warning--empty journal in berwick2003idiot
+Warning--empty year in berwick2003idiot
+Warning--empty journal in RUTA200563
+Warning--empty author in SMITHCREASEY2018147
+
+Done.
+(There was 1 error message)

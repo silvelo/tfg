@@ -1,0 +1,263 @@
+\chapter{Resultados}
+\label{chap:resultados}
+
+En este capítulo se presentarán los resultados obtenidos para cada una de las técnicas exploradas. Para ello se utilizarán las métricas de \textit{precision}, \textit{acuraccy}, \textit{F1 Score}, \textit{Fit Time} y \textit{Score Time} (véase la Sección~\ref{sec:metrics}) y los algoritmos \textit{Random Forest}, \textit{SVM}, \textit{MLP} y votación.
+
+Dada la gran cantidad de conjuntos de entrenamiento que se han establecido, primero se analizarán los resultados globales agrupados por eventos y, posteriormente, se expandirán para cada uno de los usuarios. Por último, se mostrarán los resultados obtenidos de la prueba online.
+
+
+\section{Datos agrupados por eventos}
+En esta sección se presenta el rendimiento que han ofrecido los diferentes algoritmos. En la Tabla~\ref{tab:final_results_all_features} se muestran los resultados obtenidos utilizando todas las características de los eventos.
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{l l c c c c c c}
+\toprule
+Ev. & Alg. & \thead{Accuracy \\ (\%)} & \thead{Precision \\ (\%)} & \thead{Recall \\ (\%)} & \thead{F1 Score \\ (\%)} & \thead{Fit \\ Time(s)} & \thead{Score \\ Time(s)} \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{tap}} 
+&         Vot.  & 74.66\ {\footnotesize  (±0.05)} &  77.08\ {\footnotesize  (±0.07)} &  73.52\ {\footnotesize  (±0.09)} &  74.82\ {\footnotesize  (±0.06)} & 0.197  &    0.013 \\
+&                      SVM  & 73.27\ {\footnotesize  (±0.05)} &  75.43\ {\footnotesize  (±0.07)} &  72.35\ {\footnotesize  (±0.07)} &  73.59\ {\footnotesize  (±0.05)} & 0.017  &    0.008 \\
+&   RF  & 76.48\ {\footnotesize  (±0.05)} &  78.31\ {\footnotesize  (±0.07)} &  76.24\ {\footnotesize  (±0.08)} &  76.91\ {\footnotesize  (±0.05)} & 0.020  &    0.002 \\
+&            MLP  & 70.55\ {\footnotesize  (±0.10)} &  69.57\ {\footnotesize  (±0.19)} &  67.85\ {\footnotesize  (±0.20)} &  68.31\ {\footnotesize  (±0.19)} & 0.156  &    0.001 \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{swipe}} 
+&        Vot.  & 74.33\ {\footnotesize  (±0.07)} &  84.63\ {\footnotesize  (±0.07)} &  64.38\ {\footnotesize  (±0.14)} &  71.69\ {\footnotesize  (±0.11)}   & 0.143   &   0.015  \\
+&                     SVM  & 72.51\ {\footnotesize  (±0.08)} &  83.29\ {\footnotesize  (±0.09)} &  62.05\ {\footnotesize  (±0.15)} &  69.59\ {\footnotesize  (±0.11)}   & 0.020   &   0.010  \\
+&   RF  & 79.58\ {\footnotesize  (±0.07)} &  82.12\ {\footnotesize  (±0.06)} &  78.99\ {\footnotesize  (±0.09)} &  80.22\ {\footnotesize  (±0.07)}  & 0.019   &   0.001  \\
+&            MLP  & 54.27\ {\footnotesize  (±0.09)} &  60.60\ {\footnotesize  (±0.13)} &  38.27\ {\footnotesize  (±0.24)} &  43.00\ {\footnotesize  (±0.20)}  & 0.111   &   0.001  \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{pan}} 
+&        Vot.  & 59.66\ {\footnotesize  (±0.11)} &  72.57\ {\footnotesize  (±0.17)} &  50.42\ {\footnotesize  (±0.26)} &  54.66\ {\footnotesize  (±0.16)} & 0.076   &   0.004 \\ 
+&                     SVM  & 49.43\ {\footnotesize  (±0.06)} &  70.50\ {\footnotesize  (±0.38)} &  28.64\ {\footnotesize  (±0.38)} &  26.49\ {\footnotesize  (±0.25)} & 0.002   &   0.001 \\ 
+&  RF  & 70.02\ {\footnotesize  (±0.13)} &  74.28\ {\footnotesize  (±0.14)} &  68.76\ {\footnotesize  (±0.14)} &  71.05\ {\footnotesize  (±0.13)} & 0.011   &   0.001 \\ 
+&           MLP  & 53.97\ {\footnotesize  (±0.08)} &  59.98\ {\footnotesize  (±0.10)} &  53.98\ {\footnotesize  (±0.21)} &  54.17\ {\footnotesize  (±0.11)} & 0.053   &   0.001 \\ 
+\midrule
+\multirow{4}{*}{\rotatebox{90}{orientation}} 
+&        Vot.  & 73.13\ {\footnotesize  (±0.06)} &  85.68\ {\footnotesize  (±0.09)} &  59.35\ {\footnotesize  (±0.11)} &  69.34\ {\footnotesize  (±0.08)}  & 0.082   &   0.012  \\ 
+&                     SVM  & 61.29\ {\footnotesize  (±0.06)} &  89.34\ {\footnotesize  (±0.10)} &  29.20\ {\footnotesize  (±0.11)} &  43.12\ {\footnotesize  (±0.13)}  & 0.013   &   0.007  \\ 
+&  RF  & 80.45\ {\footnotesize  (±0.06)} &  82.65\ {\footnotesize  (±0.08)} &  80.28\ {\footnotesize  (±0.08)} &  81.07\ {\footnotesize  (±0.06)}  & 0.017   &   0.001  \\
+&           MLP  & 49.66\ {\footnotesize  (±0.05)} &  51.69\ {\footnotesize  (±0.09)} &  41.59\ {\footnotesize  (±0.26)} &  42.33\ {\footnotesize  (±0.17)}  & 0.040 &   0.001  \\ 
+\midrule
+\multirow{4}{*}{\rotatebox{90}{multitouch}} 
+&         Vot.  & 68.99\ {\footnotesize  (±0.13)} &  81.30\ {\footnotesize  (±0.24)} &  53.26\ {\footnotesize  (±0.26)} &  61.20\ {\footnotesize  (±0.24)} & 0.097   &   0.003   \\ 
+&                      SVM  & 59.04\ {\footnotesize  (±0.14)} &  63.98\ {\footnotesize  (±0.48)} &  29.10\ {\footnotesize  (±0.31)} &  35.42\ {\footnotesize  (±0.33)} & 0.001   &   0.001   \\ 
+&   RF  & 75.94\ {\footnotesize  (±0.14)} &  77.50\ {\footnotesize  (±0.23)} &  72.16\ {\footnotesize  (±0.26)} &  73.38\ {\footnotesize  (±0.23)} & 0.011   &   0.001   \\ 
+&            MLP  & 51.01\ {\footnotesize  (±0.11)} &  49.57\ {\footnotesize  (±0.20)} &  45.37\ {\footnotesize  (±0.27)} &  45.44\ {\footnotesize  (±0.22)} & 0.072   &   0.001   \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{motion}} 
+&        Vot.  & 61.41\ {\footnotesize  (±0.08)} &  68.67\ {\footnotesize  (±0.08)} &  51.44\ {\footnotesize  (±0.23)} &  55.63\ {\footnotesize  (±0.15)} & 0.151  &    0.009  \\
+&                     SVM  & 54.06\ {\footnotesize  (±0.05)} &  69.34\ {\footnotesize  (±0.16)} &  33.96\ {\footnotesize  (±0.35)} &  35.50\ {\footnotesize  (±0.22)} & 0.011  &    0.007  \\
+&  RF  & 69.40\ {\footnotesize  (±0.06)} &  71.19\ {\footnotesize  (±0.07)} &  70.72\ {\footnotesize  (±0.10)} &  70.52\ {\footnotesize  (±0.07)} & 0.017  &    0.001  \\
+&           MLP  & 52.19\ {\footnotesize  (±0.07)} &  54.42\ {\footnotesize  (±0.07)} &  56.88\ {\footnotesize  (±0.20)} &  54.05\ {\footnotesize  (±0.11)} & 0.119  &    0.001  \\
+\bottomrule
+\multicolumn{2}{c}{Medias} & 65.22 &	72.24 &	56.62 &	59.65 &	0.061 &	0.005 \\
+\bottomrule
+\end{tabular}
+    \caption{Resultados medios con todas las características}
+    \label{tab:final_results_all_features}
+\end{table}
+
+Como se puede apreciar, el valor medio de \textit{precision} obtenido se encuentra en 72\%, un porcentaje aceptable para esta primera aproximación del problema. El resultado medio del resto de métricas es bajo. Esto es debido a que ciertos tipos de eventos no obtienen el rendimiento esperado y, por lo tanto la media decae. Si analizamos los algoritmos observamos que \textit{MLP} no alcanza los resultados deseados, mientras que los otros tres algoritmos obtienen los valores esperados.
+
+La siguiente prueba se realizó bajo las mismas configuraciones que la primera, a excepción del número de características. En esta segunda prueba los algoritmos se entrenaron con un conjunto de datos cuyas características fueron seleccionadas (veáse Seccción~\ref{sec:sel_cara}). Los datos de esta ejecución se muestran en la Tabla~\ref{tab:final_results}.
+
+\begin{table}[!h]
+    \centering
+\begin{tabular}{l l c c c c c c}
+\toprule
+Ev. & Alg. & \thead{Accuracy \\ (\%)} & \thead{Precision \\ (\%)} & \thead{Recall \\ (\%)} & \thead{F1 Score \\ (\%)} & \thead{Fit \\ Time(s)} & \thead{Score \\ Time(s)} \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{tap}} 
+& Vot.       & 76.16\ {\footnotesize  (±0.05)} & 77.70\ {\footnotesize  (±0.06)}  & 76.19\ {\footnotesize  (±0.07)}  & 76.69\ {\footnotesize  (±0.05)} &  0.174 & 0.013 \\ 
+& SVM                    & 74.11\ {\footnotesize  (±0.06)}  & 75.90\ {\footnotesize  (±0.06)}  & 73.60\ {\footnotesize  (±0.08)}  & 74.50\ {\footnotesize  (±0.06)} &  0.016 & 0.008 \\ 
+& RF  & 77.23\ {\footnotesize  (±0.05)}  & 78.42\ {\footnotesize  (±0.06)}  & 77.97\ {\footnotesize  (±0.06)}  & 77.95\ {\footnotesize  (±0.04)} &  0.017 & 0.002 \\ 
+& MLP             & 73.43\ {\footnotesize  (±0.08)}  & 74.54\ {\footnotesize  (±0.08)}  & 73.67\ {\footnotesize  (±0.11)}  & 73.90\ {\footnotesize  (±0.09)} &  0.152 & 0.001 \\ 
+\midrule
+\multirow{4}{*}{\rotatebox{90}{swipe}} 
+& Vot.  & 78.71\ {\footnotesize  (±0.06)}  & 82.88\ {\footnotesize  (±0.05)} & 75.74\ {\footnotesize  (±0.09)} & 78.86\ {\footnotesize  (±0.05)}&  0.085 & 0.022  \\
+& SVM  & 78.23\ {\footnotesize  (±0.05)}  & 83.18\ {\footnotesize  (±0.04)} & 73.86\ {\footnotesize  (±0.07)} & 78.06\ {\footnotesize  (±0.05)}&  0.028 & 0.018  \\
+& RF  & 79.93\ {\footnotesize  (±0.05)}  & 82.45\ {\footnotesize  (±0.04)} & 78.79\ {\footnotesize  (±0.08)} & 80.41\ {\footnotesize  (±0.05)} &  0.018 & 0.002 \\
+& MLP  & 69.09\ {\footnotesize  (±0.14)}  & 72.75\ {\footnotesize  (±0.15)} & 61.27\ {\footnotesize  (±0.28)} & 63.54\ {\footnotesize  (±0.26)} &  0.047 & 0.001 \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{pan}} 
+& Vot.  & 68.26\ {\footnotesize  (±0.13)}  & 74.71\ {\footnotesize  (±0.14)} & 62.97\ {\footnotesize  (±0.22)} & 66.58\ {\footnotesize  (±0.17)} &  0.051 & 0.004 \\
+& SVM  & 55.34\ {\footnotesize  (±0.14)}  & 68.10\ {\footnotesize  (±0.31)} & 31.34\ {\footnotesize  (±0.27)} & 38.44\ {\footnotesize  (±0.24)} &  0.002 & 0.001 \\
+& RF  & 71.68\ {\footnotesize  (±0.13)}  & 75.67\ {\footnotesize  (±0.13)} & 70.92\ {\footnotesize  (±0.17)} & 72.40\ {\footnotesize  (±0.13)} &  0.011 & 0.001 \\
+& MLP  & 58.69\ {\footnotesize  (±0.13)}  & 63.16\ {\footnotesize  (±0.13)} & 60.17\ {\footnotesize  (±0.27)} & 58.69\ {\footnotesize  (±0.17)} &  0.035 & 0.001 \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{orientation}} 
+& Vot.  & 78.72\ {\footnotesize  (±0.06)}  & 83.49\ {\footnotesize  (±0.09)} & 75.39\ {\footnotesize  (±0.11)} & 78.48\ {\footnotesize  (±0.07)} &  0.098 & 0.037  \\
+& SVM  & 73.19\ {\footnotesize  (±0.07)}  & 83.67\ {\footnotesize  (±0.10)} & 62.87\ {\footnotesize  (±0.15)} & 70.36\ {\footnotesize  (±0.09)} &  0.053 & 0.033  \\
+& RF  & 82.43\ {\footnotesize  (±0.06)}  & 84.56\ {\footnotesize  (±0.08)} & 82.14\ {\footnotesize  (±0.08)} & 82.96\ {\footnotesize  (±0.06)} &  0.019 & 0.002  \\
+& MLP  & 56.47\ {\footnotesize  (±0.12)}  & 58.81\ {\footnotesize  (±0.11)} & 57.10\ {\footnotesize  (±0.17)} & 57.08\ {\footnotesize  (±0.13)} &  0.031 & 0.001  \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{multitouch}} 
+& Vot.  & 71.96\ {\footnotesize  (±0.12)}  & 82.25\ {\footnotesize  (±0.23)} & 58.20\ {\footnotesize  (±0.25)} & 65.59\ {\footnotesize  (±0.23)} &  0.057 & 0.003 \\
+& SVM  & 59.65\ {\footnotesize  (±0.14)}  & 70.00\ {\footnotesize  (±0.46)} & 26.34\ {\footnotesize  (±0.25)} & 35.67\ {\footnotesize  (±0.31)} &  0.001 & 0.001 \\
+& RF  & 78.35\ {\footnotesize  (±0.10)}  & 81.67\ {\footnotesize  (±0.11)} & 80.20\ {\footnotesize  (±0.17)} & 79.32\ {\footnotesize  (±0.11)} &  0.011 & 0.001 \\
+& MLP  & 62.05\ {\footnotesize  (±0.12)}  & 67.46\ {\footnotesize  (±0.13)} & 66.14\ {\footnotesize  (±0.23)} & 63.55\ {\footnotesize  (±0.16)} &  0.039 & 0.001 \\
+\midrule
+\multirow{4}{*}{\rotatebox{90}{motion}} 
+& Vot.  & 67.20\ {\footnotesize  (±0.06)}  & 69.20\ {\footnotesize  (±0.07)} & 67.79\ {\footnotesize  (±0.10)}  & 68.10\ {\footnotesize  (±0.06)} &  0.160 & 0.039 \\
+& SVM  & 62.51\ {\footnotesize  (±0.06)}  & 67.12\ {\footnotesize  (±0.08)} & 59.33\ {\footnotesize  (±0.17)}  & 61.30\ {\footnotesize  (±0.09)} &  0.053 & 0.034 \\
+& RF  & 68.15\ {\footnotesize  (±0.08)}  & 69.65\ {\footnotesize  (±0.08)} & 70.64\ {\footnotesize  (±0.10)}  & 69.78\ {\footnotesize  (±0.08)} &  0.020 & 0.002 \\
+& MLP  & 62.98\ {\footnotesize  (±0.08)}  & 65.29\ {\footnotesize  (±0.09)} & 61.77\ {\footnotesize  (±0.14)}  & 62.90\ {\footnotesize  (±0.11)} &  0.117 & 0.001 \\
+\bottomrule
+\multicolumn{2}{c}{Medias} & 70.19 &	74.69	&66.02	&68.13	&0.054	&0.010 \\
+\bottomrule
+\end{tabular}
+
+    \caption{Resultados medios con las características seleccionadas}
+    \label{tab:final_results}
+\end{table}
+
+Los resultados obtenidos por esta prueba, muestran un incremento promedio en las métricas de \textit{precision}, \textit{acuraccy}, \textit{F1 Score} y una disminución de los tiempos de cómputo. Observando los resultados individualmente se puede comprobar una mejora en la mayoría de casos, especialmente en los casos del algoritmo \textit{MLP} y los eventos \textit{motion} y \textit{orientation}. Comparando los resultados de ambas tablas podemos afirmar que la técnica de selección de características aplicada en esta parte del problema ha sido satisfactoria.
+
+En resumen, con respecto a los eventos de \textit{swipe}, \textit{multitouch} y \textit{orientation} han demostrado un rendimiento sensiblemente superior al resto de eventos. Con respecto a los algoritmos todos han obtenido unos porcentajes elevados, pero el más destacado es \textit{RF}. El algoritmo de votación ha obtenido un buen rendimiento, especialmente si consideramos que este tipo de algoritmos suelen trabajar mejor cuando tienen muchos estimadores, en nuestro caso el número de estimadores es tres, uno por cada algoritmo.
+
+\newpage
+
+\section{Datos agrupados por usuarios}
+
+Después de realizar las pruebas con los eventos agrupados ya sabemos que algoritmos y eventos funcionan mejor. Conociendo estos datos podemos agrupar los eventos por usuario y comprobar su rendimiento~[Tabla~\ref{tab:combine_results}].
+
+\begin{table}[h]
+    \centering
+\begin{tabular}{l c c c c}
+\toprule
+User & Accuracy & Precision &  Recall & F1 Score\\
+\midrule
+ Usuario 1      &    68.20\% &    64.83\% &  81.54\% &   72.23\% \\
+ Usuario 2      &    68.02\% &    65.08\% &  81.69\% &   72.44\% \\
+ Usuario 3      &    70.93\% &    73.08\% &  65.60\% &   69.14\% \\
+ Usuario 4      &    73.15\% &    81.20\% &  61.70\% &   70.12\% \\
+ Usuario 5      &    65.54\% &    63.08\% &  78.84\% &   70.08\% \\
+ Usuario 6      &    67.02\% &    68.50\% &  68.03\% &   68.27\% \\
+ Usuario 7      &    72.76\% &    85.42\% &  58.16\% &   69.20\% \\
+ Usuario 8      &    60.82\% &    56.72\% &  75.90\% &   64.92\% \\
+ Usuario 9      &    74.32\% &    71.47\% &  78.25\% &   74.71\% \\
+ Usuario 10     &    70.30\% &    73.91\% &  64.59\% &   68.94\% \\
+ Usuario 11     &    73.00\% &    69.19\% &  81.53\% &   74.85\% \\
+ Usuario 12     &    68.88\% &    63.28\% &  80.87\% &   71.00\% \\
+ Usuario 13     &    69.48\% &    65.76\% &  81.50\% &   72.79\% \\
+ Usuario 14     &    82.30\% &    79.55\% &  86.99\% &   83.11\% \\
+ Usuario 15     &    71.86\% &    68.81\% &  83.11\% &   75.29\% \\
+ Usuario 16     &   66.17\% &    79.09\% &  44.84\% &   57.23\% \\
+ Usuario 17     &   70.05\% &    68.81\% &  75.04\% &   71.79\% \\
+ Usuario 18     &   68.41\% &    63.38\% &  89.37\% &   74.16\% \\
+ \midrule
+ Medias          & 70,07\% &  	70,06\% &  	74,31\% &  	71,13\%  \\
+\bottomrule
+\end{tabular}
+    \caption{Resultados de los eventos agrupados por usuario}
+    \label{tab:combine_results}
+\end{table}
+
+Los resultados obtenidos son aceptables para una primera aproximación, obteniendo unos valores medios del 70\% en cada una de las columnas. Para estas pruebas se utilizó el algoritmo de votación, donde sus estimadores fueron los algoritmos entrenados en la sección anterior.
+
+
+Para intentar optimizar el rendimiento de la votación, se decidió seleccionar los mejores algoritmos (\textit{SVM} y \textit{RF}). Esta combinación se realizó con todos los eventos pero a cada uno de ellos se le asignó un peso. Este peso indica al algoritmo de votación que estimadores internos debe tener más en cuenta. Para calcular estos pesos, se utilizaron los valores obtenidos en la Tabla~\ref{tab:final_results}. La Tabla~\ref{tab:combine_selected_alg} muestra los resultados obtenidos de esta combinación.
+
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{l c c c c}
+\toprule
+User & Accuracy & Precision &  Recall & F1 Score\\
+\midrule
+
+Usuario 1      &   81.72\% &    85.26\% &  76.70\% &   80.75\%  \\
+Usuario 2      &   77.40\% &    83.44\% &  69.61\% &   75.90\%  \\
+Usuario 3      &   79.30\% &    90.27\% &  68.44\% &   77.86\%  \\
+Usuario 4      &   81.05\% &    91.15\% &  70.33\% &   79.40\%  \\
+Usuario 5      &   79.62\% &    83.53\% &  73.45\% &   78.17\%  \\
+Usuario 6      &   72.97\% &    85.19\% &  58.97\% &   69.70\%  \\
+Usuario 7      &   70.00\% &   98.45\% &  47.83\% &   64.71\%  \\
+Usuario 8      &   66.25\% &    73.77\% &  54.22\% &   62.50\%  \\
+Usuario 9      &   69.70\% &    81.48\% &  59.46\% &   68.75\%  \\
+Usuario 10   &   82.84\% &    87.37\% &  78.30\% &   82.59\%   \\
+Usuario 11   &   79.38\% &    84.29\% &  72.84\% &   78.15\%   \\
+Usuario 12   &   71.23\% &    89.74\% &  47.95\% &   62.50\%   \\
+Usuario 13   &   78.27\% &    84.67\% &  69.05\% &   76.07\%   \\
+Usuario 14   &   84.94\% &    92.38\% &  77.60\% &   84.35\%  \\
+Usuario 15   &   78.29\% &    84.67\% &  70.56\% &   76.97\%   \\
+Usuario 16 &   77.15\% &    82.46\% &  70.36\% &   75.93\%  \\
+Usuario 17 &   76.99\% &    81.41\% &  70.95\% &   75.82\%  \\
+Usuario 18 &   76.85\% &    83.20\% &  65.82\% &   73.50\%  \\
+\midrule
+Medias & 71,54\% & 	77,22\% &	61,98\% &	68,53\% \\
+
+\bottomrule
+\end{tabular}
+    \caption{Resultados de los mejores algoritmos agrupados por usuario}
+    \label{tab:combine_selected_alg}
+\end{table}
+
+Los datos muestran un mejora significativa en \textit{precision} a cambio de reducir en \textit{recall}, pero en el global (\textit{accuracy}) también se ha mejorado. Esto se debe a que algunos eventos obtienen un porcentaje de acierto más bajo y esto afecta negativamente al conjunto, incluso usando pesos para minimizar dicha impacto. Por este motivo, se ha planteado el uso de aquellos eventos para los que se obtiene un mejor rendimiento (\textit{orientation}, \textit{multitouch} y \textit{swipe}) y, nuevamente, se aplicará un sistema de votación que ponderará su influencia en el resultado final, tal y como se puede observar en la Tabla~\ref{tab:combine_selected_results}
+
+
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{l c c c c}
+\toprule
+User & Accuracy & Precision &  Recall & F1 Score\\
+\midrule
+Usuario 1 & 80.29\% &    81.18\% &  78.85\% &   80.00\% \\
+Usuario 2 & 78.11\% &    85.57\% &  68.78\% &   76.26\% \\
+Usuario 3 & 80.17\% &    90.91\% &  69.67\% &   78.89\% \\
+Usuario 4 & 81.82\% &    92.28\% &  70.92\% &   80.20\% \\
+Usuario 5 & 79.62\% &    81.09\% &  76.90\% &   78.94\% \\
+Usuario 6 & 72.97\% &    80.65\% &  64.10\% &   71.43\% \\
+Usuario 7 & 52.50\% &    62.50\% &  43.48\% &   51.28\% \\
+Usuario 8 & 63.12\% &    69.35\% &  51.81\% &   59.31\% \\
+Usuario 9 & 68.94\% &    80.00\% &  59.46\% &   68.22\% \\
+Usuario 10 & 84.07\% &    89.73\% &  78.30\% &   83.63\% \\
+Usuario 11 & 83.75\% &    89.86\% &  76.54\% &   82.67\% \\
+Usuario 12 & 71.92\% &    82.00\% &  56.16\% &   66.67\% \\
+Usuario 13 & 76.19\% &    80.99\% &  68.45\% &   74.19\% \\
+Usuario 14 & 82.85\% &    90.38\% &  75.20\% &   82.10\% \\
+Usuario 15 & 81.43\% &    86.16\% &  76.11\% &   80.83\% \\
+Usuario 16 & 76.07\% &    80.90\% &  69.76\% &   74.92\% \\
+Usuario 17 & 77.84\% &    84.83\% &  68.72\% &   75.93\% \\
+Usuario 18 & 76.85\% &    80.29\% &  69.62\% &   74.58\% \\
+\midrule
+Medias & 76,03\% &	82,70\% &	67,94\% &	74,45\%  \\
+\bottomrule
+\end{tabular}
+    \caption{Resultados de los mejores eventos y algoritmos agrupados por usuario}
+    \label{tab:combine_selected_results}
+\end{table}
+
+
+El rendimiento obtenido en última instancia mejora considerablemente a los anteriores, como fruto de un proceso de refinamiento tanto de las características y los eventos empleados, como de los modelos de aprendizaje máquina construidos.
+
+\section{Servicio de autenticación en línea}
+
+A lo largo de este capítulo hemos refinado progresivamente los algoritmos tratando de alcanzar unos resultados que fuesen satisfactorios. En esta última sección, se analiza la implementación de un servicio web que permite verificar la identidad de los usuarios a través de su perfil específico, elaborado mediante los modelos detallados anteriormente. 
+
+Para ello se selecciona aleatoriamente una muestra correspondiente a un usuario (denominado \textit{Usuario 1}) y se realizan diferentes peticiones al servidor para simular su autenticación contra su propio perfil y tres perfiles diferentes seleccionados también de forma aleatoria (denominados \textit{Usuario 2}, \textit{Usuario 3} y \textit{Usuario 4}). Tal y como se puede observar en la Tabla~\ref{tab:online_results}, el servicio de autenticación proporciona un mayor índice de coincidencia con el perfil de usuario legítimo que para perfiles de otros usuarios, cumpliéndose el propósito del sistema. Así mismo, los tiempos de respuesta obtenidos por el servidor son aceptables para su implantación en un entorno real, ya que se trata de un proceso en segundo plano que no afectaría a la interacción del usuario con el sistema.
+
+
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{ l c c }
+        \toprule
+        Usuario & Predicción & Tiempo de ejecución (s) \\
+        \midrule
+         Usuario 1 & 86.37\%   & 5 \\
+         Usuario 2 & 36.89\%   & 6 \\
+         Usuario 3 & 35.65\%   & 5 \\
+         Usuario 4 & 40.43\%   & 6 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultados de la prueba online}
+    \label{tab:online_results}
+\end{table}
+
+
+
+
+

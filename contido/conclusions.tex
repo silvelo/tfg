@@ -1,0 +1,17 @@
+\chapter{Conclusiones}
+\label{chap:conclusions}
+
+
+En este último capítulo de la memoria se comentarán las conclusiones extraídas de la realización del proyecto, haciendo especial énfasis en los resultados obtenidos con las técnicas comentadas para intentar encontrar una solución al problema planteado al inicio del proyecto.
+
+Para obtener los datos se creó una aplicación móvil que, en su desarrollo, planteaba varios desafíos asociados a la captura de lo eventos para su análisis. El estudio fue realizado en un entorno controlado, por lo tanto, la aplicación fue diseñada e implementada para el dispositivo adquirido, \textbf{Samsung Tab}, aunque su funcionamiento en otros dispositivos también fue comprobado.
+
+Para guardar de manera persistente estos datos, se implementó un servidor que, mediante una \textbf{API REST} [Apéndice~\ref{chap:rest_api}] permite realizar operaciones de consulta y almacenamiento de los datos. Para securizar estas peticiones, se ha utilizado el protocolo \textit{HTTPS} que garantiza el cifrado de la información.
+
+Los datos obtenidos pertenecen a 18 usuarios con edades comprendidas entre los 24 y 70 años de los cuales un 30\% son mujeres y el 70\% restante hombres. De esta manera, las muestras utilizadas son suficientemente representativas para esta primera aproximación al problema.
+
+Las técnicas de \textit{IA} empleadas para el reconocimiento de patrones fueron el perceptrón multicapa, las máquinas de soporte vectorial y los bosques aleatorios (\textit{Random Forest}). En una primera instancia y de manera individual los resultados obtenidos por estos algoritmos fueron aceptables. En una segunda fase se utilizó el algoritmo de votación para obtener una combinación de los métodos mencionados. Los resultados obtenidos con estas técnicas mejoraron notablemente los resultados sin una pérdida importante de rendimiento. Por último, combinando los algoritmos y  seleccionando únicamente los eventos más significativos se consiguió una mejora de un 12\% en los resultados.
+
+Se implementó un servidor en línea que utilizó este método combinado y optimizado. En las pruebas realizadas, se enviaron peticiones de manera continua, las cuales contenían los eventos de un usuario y el nombre al que, en teoría, debían de comprobar. El comportamiento de este mecanismo también demostró ser eficiente manteniendo la eficacia anteriormente descrita.
+
+En conclusión, el estudio planteado en este proyecto demuestra que es factible el uso de un sistema de autenticación continuo comprobando la legitimidad del usuario.

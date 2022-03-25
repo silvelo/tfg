@@ -1,0 +1,237 @@
+\chapter{REST API}
+\label{chap:rest_api}
+\section{Ruta Autenticación}
+\begin{itemize} 
+ \item \textbf{/auth/token}
+ 
+    \begin{itemize} 
+        \item \textbf{POST} 
+            \begin{itemize} 
+                \item \textbf{Descripción}: Obtiene el token JWT
+           
+                \item \textbf{Parámetros}
+                
+                    \begin{table}[h]
+                        \centering
+                        \begin{tabular}{ l l l l l } 
+                            \toprule
+                            Posición & Nombre & Descripción & Requerido & Tipo \ref{tab:definitions} \\
+                            \midrule
+                            body & JwtPayload & El par usuario contraseña & true &  JwtPayload\\
+                            \bottomrule
+                        \end{tabular} 
+                    \end{table}
+
+                \item \textbf{Respuestas}
+                
+                    \begin{table}[h]
+                        \centering
+                        \begin{tabular}{ l l l } 
+                            \toprule
+                            Código & Descripción & Esquema \ref{tab:definitions} \\ 
+                            \midrule
+                            201 & Devuelve el token de autenticación & JwtPayloadResponse \\ 
+                            401 & Credenciales incorrectas & HttpException \\  
+                            \bottomrule
+                        \end{tabular} 
+                    \end{table}
+            \end{itemize} 
+    \end{itemize} 
+\newpage
+\section{Ruta Usuarios}
+\item \textbf{/users/admin}
+            
+    \begin{itemize} 
+        \item \textbf{PUT}
+            \begin{itemize} 
+                \item \textbf{Descripción}: Actualiza la información del usuario administrador.
+                \item \textbf{Parámetros}
+                    
+                    \begin{table}[h]
+                        \centering
+                        \begin{tabular}{ l l l l l } 
+                            \toprule
+                            Posición & Nombre & Descripción & Requerido & Tipo \ref{tab:definitions} \\ 
+                            \midrule
+                            body & CreateUserDto & Datos del usuario nuevo & true & CreateUserDto \\  
+                            \bottomrule
+                        \end{tabular} 
+                    \end{table}
+                    
+                \item \textbf{Respuestas}
+                    
+                    \begin{table}[h]
+                        \centering
+                        \begin{tabular}{ l p{6cm} l } 
+                            \toprule
+                            Código & Descripción & Esquema \ref{tab:definitions} \\ 
+                            \midrule 
+                            200 & Devuelve el token de autenticación & JwtPayloadResponse \\ 
+                            403 & Excepción, no tiene permisos para realizar esta operación & HttpException \\  
+                            \bottomrule
+                        \end{tabular} 
+                    \end{table}
+            \end{itemize} 
+    \end{itemize}
+\newpage
+\section{Ruta Eventos}
+\item \textbf{/events}
+            \begin{itemize} 
+                \item \textbf{POST} 
+                    \begin{itemize} 
+                        \item \textbf{Descripción}: Crea un nuevo evento
+                    
+                        \item \textbf{Parámetros}
+                        \begin{table}[h]
+                            \centering
+                                \begin{tabular}{ l l p{5cm} l l } 
+                                    \toprule 
+                                    Posición & Nombre & Descripción & Requerido & Tipo \ref{tab:definitions} \\ 
+                                    \midrule
+                                    query & type & Tipo de la coleción (detect | profile), por defecto: detect & false & string \\ 
+                                    body & email & Email del usuario & true & string \\ 
+                                    body & events & Objeto con los datos de los eventos & false & EventResponse \\  
+                                    \bottomrule
+                                \end{tabular} 
+                            \end{table}
+                    
+                    
+                        \item \textbf{Respuestas}
+                            \begin{table}[h]
+                                \centering
+                                \begin{tabular}{ l l l } 
+                                    \toprule
+                                     Código & Descripción & Esquema \ref{tab:definitions} \\ 
+                                     \midrule
+                                    201 & Petición realizada correctamente & - \\ 
+                                    400 & No se ha encontrado el email & HttpException \\  
+                                    \bottomrule
+                                \end{tabular} 
+                            \end{table}
+                    \end{itemize} 
+                \end{itemize} 
+\newpage
+\item \textbf{/events/\{email\}}
+            \begin{itemize} 
+                 \item \textbf{GET} 
+                     \begin{itemize} 
+                         \item \textbf{Descripción} : Obtiene los eventos de un usuario concreto
+                    
+                        \item \textbf{Parámetros}
+                            
+                            \begin{table}[!h]
+                                \centering
+                                \begin{tabular}{ l l p{6cm} l l} 
+                                    \toprule
+                                    Posición & Nombre & Descripción & Requerido & Tipo \\ 
+                                    \midrule
+                                    path & email & Email para buscar los eventos  & true & string \\ 
+                                    query & type & Tipo de datos a buscar (detect | profile), por defecto: detect & false & string \\  
+                                    \bottomrule
+                                 \end{tabular} 
+                            \end{table}
+                    
+                        \item \textbf{Respuestas}
+                        
+                        
+                            \begin{table}[!h]
+                                \centering
+                                \begin{tabular}{ l  l  l } 
+                                    \toprule
+                                     Código & Descripción & Esquema \ref{tab:definitions}\\ 
+                                     \midrule
+                                    200 & Devuelve los datos de los eventos del usuario & EventResponse \\  
+                                    \bottomrule
+                                \end{tabular} 
+                            \end{table}
+                            
+                            
+                    \end{itemize} 
+            \end{itemize} 
+\newpage      
+\item \textbf{/events/\{email\}/groups}
+    \begin{itemize} 
+         \item \textbf{GET} 
+             \begin{itemize} 
+                \item \textbf{Descripción}: Obtiene los eventos de un usuario concreto, agrupados por tipo.
+             
+                \item \textbf{Parámetros}
+                \begin{table}[h]
+                    \centering
+                    \begin{tabular}{ l l p{5cm} l l} 
+                        \toprule
+                        Posición & Nombre & Descripción & Requerido & Tipo \\ 
+                        \midrule
+                        path & email & Email para buscar los eventos  & true & string \\ 
+                        query & type & Tipo de datos a buscar (detect | profile), por defecto: detect & false & string \\  
+                        \bottomrule
+                     \end{tabular} 
+                \end{table}
+            
+                \item \textbf{Respuestas}
+                    \begin{table}[h]
+                        \centering
+                        \begin{tabular}{ l  p{6cm}  l } 
+                            \toprule
+                             Código & Descripción & Esquema \ref{tab:definitions}\\ 
+                             \midrule
+                            200 & Devuelve los datos de los eventos del usuario agrupados por tipo & EventResponse \\  
+                            \bottomrule
+                        \end{tabular} 
+                    \end{table}
+
+            \end{itemize} 
+    \end{itemize} 
+ 
+ \newpage
+ \section{Definición de los esquemas}
+ \item \textbf{Definiciones} 
+        \begin{table}[h]
+            \centering
+            
+        
+        \begin{tabular}{ l l l l } 
+        
+            \toprule
+            \textbf{Objeto} & \textbf{Nombre} & \textbf{Tipo} & \textbf{Requerido} \\
+            \midrule
+            
+            \multirow{2}{*}{JwtPayload}
+            & email & string & true \\ 
+            & password & string & true \\ 
+            \bottomrule
+            
+            \multirow{1}{*}{JwtPayloadResponse}
+            & accessToken & string & true \\
+            \bottomrule
+            
+            \multirow{2}{*}{HttpException}
+            & message & string & true \\ 
+            & statusCode & number & true \\
+            \bottomrule
+    
+    
+            \multirow{2}{*}{CreateUserDto}
+            
+            & email & string & true \\ 
+            & password & string & true \\
+            \bottomrule
+            
+            \multirow{8}{*}{EventResponse}
+            
+            & pan & array & false \\ 
+            & motion & array & false \\ 
+            & orientation & array & false \\ 
+            & pinch & array & false \\ 
+            & press & array & false \\ 
+            & rotate & array & false \\ 
+            & swipe & array & false \\ 
+            & tap & array & false \\ 
+            \bottomrule
+        \end{tabular}
+        \caption{Tabla de Definiciones}
+        \label{tab:definitions}
+ \end{table}
+ 
+\end{itemize}
+

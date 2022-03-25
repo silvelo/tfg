@@ -1,0 +1,57 @@
+\select@language {spanish}
+\select@language {spanish}
+\select@language {spanish}
+\select@language {english}
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistema de coordenadas del acelerómetro\relax }}{8}{figure.caption.4}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Sistema de coordenadas del giroscopio\relax }}{9}{figure.caption.5}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema matriz de confusión\relax }}{12}{figure.caption.8}% 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Problemas de entrenamiento\relax }}{14}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Esquema de un neurona artificial\relax }}{15}{figure.caption.10}% 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Esquema del MLP\relax }}{16}{figure.caption.11}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ejemplo de una MLP}}{17}{figure.caption.12}% 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ejemplo de Clasificación SVM\relax }}{18}{figure.caption.13}% 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Ejemplo de Clasificación SVM no lineal, usando función gaussiana}}{19}{figure.caption.14}% 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Árbol de decisión para conceder un préstamo\relax }}{19}{figure.caption.15}% 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Ejemplo de k-Nearest Neighbours\relax }}{20}{figure.caption.16}% 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Ejemplo de \textit {Bootstrapping}}}{21}{figure.caption.17}% 
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Ejemplo de \textit {Boosting}}}{22}{figure.caption.18}% 
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Esquema \textit {Random Forest}\relax }}{23}{figure.caption.19}% 
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Esquema clasificación por votación\relax }}{24}{figure.caption.20}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Lista de tareas planificadas\relax }}{30}{figure.caption.22}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de Gantt\relax }}{31}{figure.caption.23}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arquitectura de tres capas\relax }}{36}{figure.caption.27}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Patrón Modelo-Vista-Vista-Modelo\relax }}{36}{figure.caption.28}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Capa de lógica de negocio\relax }}{39}{figure.caption.29}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Fases del modelo incremental\relax }}{43}{figure.caption.31}% 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Estructura de la aplicación\relax }}{45}{figure.caption.32}% 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Ciclo del patrón redux\relax }}{45}{figure.caption.33}% 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Estructura de la aplicación\relax }}{47}{figure.caption.34}% 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Pirámide de Cohn}}{49}{figure.caption.35}% 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Resultado de las pruebas en el servidor\relax }}{50}{figure.caption.36}% 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Resultado de las pruebas en la aplicación}}{50}{figure.caption.37}% 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Cobertura de las pruebas del servidor\relax }}{52}{figure.caption.38}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de Polynomial Feature\relax }}{55}{figure.caption.40}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Características Iniciales VS Características Seleccionadas\relax }}{61}{figure.caption.45}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Ventana principal\relax }}{81}{figure.caption.63}% 
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Menú de configuración\relax }}{82}{figure.caption.64}% 
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Ventana de login\relax }}{83}{figure.caption.65}% 
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Ventana del juego de \textit {Puzzle Sliding}\relax }}{83}{figure.caption.66}% 
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Ventana del juego de \textit {Whack a Mole}\relax }}{84}{figure.caption.67}% 
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Ventana del juego de \textit {Flappy Bird}\relax }}{84}{figure.caption.68}% 
+\contentsline {figure}{\numberline {B.7}{\ignorespaces Ventana del juego de \textit {Fruit Ninja}\relax }}{85}{figure.caption.69}% 
+\contentsline {figure}{\numberline {B.8}{\ignorespaces Ventana del juego de \textit {Outrun}\relax }}{85}{figure.caption.70}% 
+\contentsline {figure}{\numberline {B.9}{\ignorespaces Ventana del juego de \textit {Buscar Países}\relax }}{86}{figure.caption.71}% 
+\contentsline {figure}{\numberline {B.10}{\ignorespaces Ventana del juego de \textit {Rotación}\relax }}{86}{figure.caption.72}% 
+\contentsline {figure}{\numberline {B.11}{\ignorespaces Ventana de puntuaciones\relax }}{87}{figure.caption.73}% 

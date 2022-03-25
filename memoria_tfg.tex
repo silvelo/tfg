@@ -1,0 +1,108 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preámbulo                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper,titlepage,twoside,openright,openbib]{report}
+
+%%% RELACIÓN DE VARIABLES A PERSONALIZAR %%%
+%\def\lingua{gal}
+\def\lingua{esp} % descomenta esta liña se redactarás a memoria en español
+%\def\lingua{eng} % descomenta esta liña se redactarás a memoria en inglés
+\def\nome{Arturo Silvelo Pallín}                             % substitúe aquí o teu nome
+\def\nomedirectorA{José Carlos Dafonte Vázquez}             % substitúe aquí o nome de quen dirixe
+\def\nomedirectorB{Daniel Garabato Míguez}
+\def\titulo{Sistema de autenticación biométrica basado en el análisis del comportamiento mediante interacción por pantalla táctil y sensores de movimiento} % substitúe aquí o título do teu TFG
+%\def\mencion{NOME DA MENCIÓN}                        % descomenta a mención correspondente
+%\def\mencion{COMPUTACIÓN}
+%\def\mencion{ENXEÑARÍA DO SOFTWARE}
+%\def\mencion{ENXEÑARÍA DE COMPUTADORES}
+%\def\mencion{SISTEMAS DE INFORMACIÓN}
+\def\mencion{TECNOLOGÍA DE LA INFORMACIÓN}
+
+\usepackage{estilo_tfg}
+
+% Lista de paquetes potencialmente interesantes (uso baixo demanda)
+\usepackage{makecell} %Multilinea en la cabecera thead
+\usepackage{enumitem}    % permite personalizar os entornos de lista
+\usepackage{eurosym}    % proporciona o comando \euro
+\usepackage{float}       % permite máis opcións para controlar obxectos flotantes (táboas, figuras)
+\usepackage{longtable}   % permite construir táboas que ocupan máis dunha páxina
+\usepackage{lscape}      % permite colocar partes do documento en orientación apaisada
+\usepackage{multirow}    % permite crear celdas que ocupan varias filas da mesma táboa
+\usepackage{booktabs} % permite crear lineas
+\usepackage{rotating}    % permite diferentes tipos de rotacións para figuras e táboas
+\usepackage{subcaption}  % permite a inclusión de varias subfiguras nunha figura
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Corpo                                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Preliminares do documento            %
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \include{portada/portada}
+ \paxinaenbranco
+ \dedicatoria{A mi familia} % escribe neste comando o teu texto de dedicatoria
+ \paxinaenbranco
+ \paxinaenbranco
+ \begin{agradecementos}
+ 
+ A mi familia, por su apoyo incondicional, en los buenos momentos, pero sobre todo en los malos.
+ 
+ A los directores del proyecto, Carlos Dafonte y Daniel Garabato, por su continuo apoyo para sacar esto adelante.
+
+ 
+ \end{agradecementos}
+ \paxinaenbranco
+ \include{portada/resumo}
+ \paxinaenbranco
+ \paxinaenbranco
+ \pagenumbering{roman}
+
+ \setcounter{page}{1}
+
+ \tableofcontents
+ \listoffigures
+ \listoftables
+ \cleardoublepage
+ 
+ \pagenumbering{arabic}
+ \setcounter{page}{1}
+ \bstctlcite{IEEEexample:BSTcontrol}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Capítulos                            %
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \include{contido/introducion}
+ \include{contido/estado}
+ \include{contido/alternativas}
+ \include{contido/planificación}
+ \include{contido/tecnologias}
+ \include{contido/metodologia}
+ \include{contido/pruebas}
+ \include{contido/ia}
+ \include{contido/resultados}
+ \include{contido/futuro}
+ \include{contido/conclusions}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Apéndices, glosarios e bibliografía  %
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \appendix
+ \appendixpage
+ \include{anexos/restapi}
+ \include{anexos/aplicación}
+
+ \bibliographystyle{IEEEtran}
+ \bibliography{\bibconfig,bibliografia/bibliografia}
+ \cleardoublepage
+ 
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

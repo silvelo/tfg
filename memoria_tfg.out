@@ -1,0 +1,91 @@
+\BOOKMARK [0][-]{chapter.1}{Introducción}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Motivación}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Objetivos}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Organización de la memoria}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Fundamentos teóricos}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Seguridad Informática}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{Conceptos\040previos}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{Objetivos de la seguridad informática}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.3}{Autenticación de usuario}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Características del uso de los sensores}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{Acelerómetro}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{Giroscopio}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.3}{Extracción de características}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Características del uso de la pantalla táctil}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.4}{Evaluación del rendimiento}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.5}{Inteligencia\040Artificial}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.5.1}{Tipo\040de\040aprendizaje}{section.2.5}% 17
+\BOOKMARK [2][-]{subsection.2.5.2}{Redes\040Neuronales\040Artificiales}{section.2.5}% 18
+\BOOKMARK [2][-]{subsection.2.5.3}{Perceptrón Multicapa}{section.2.5}% 19
+\BOOKMARK [2][-]{subsection.2.5.4}{Maquinas\040de\040soporte\040vectorial}{section.2.5}% 20
+\BOOKMARK [2][-]{subsection.2.5.5}{Árboles de Decisión}{section.2.5}% 21
+\BOOKMARK [2][-]{subsection.2.5.6}{Regresión Logística}{section.2.5}% 22
+\BOOKMARK [2][-]{subsection.2.5.7}{k-Nearest\040Neighbours}{section.2.5}% 23
+\BOOKMARK [2][-]{subsection.2.5.8}{Métodos Ensambladores}{section.2.5}% 24
+\BOOKMARK [2][-]{subsection.2.5.9}{Bosques\040Aleatorios}{section.2.5}% 25
+\BOOKMARK [2][-]{subsection.2.5.10}{Clasificador por Votación}{section.2.5}% 26
+\BOOKMARK [1][-]{section.2.6}{Estudio\040de\040alternativas}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.6.1}{SealSign}{section.2.6}% 28
+\BOOKMARK [2][-]{subsection.2.6.2}{Biosig-id}{section.2.6}% 29
+\BOOKMARK [2][-]{subsection.2.6.3}{Touch\040me\040once\040and\040I\040know\040it's\040you\040}{section.2.6}% 30
+\BOOKMARK [0][-]{chapter.3}{Planificación y evaluación de costes}{}% 31
+\BOOKMARK [1][-]{section.3.1}{Recursos\040y\040actividades}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.2}{Planificación Inicial}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.3}{Seguimiento\040del\040proyecto}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.4}{Análisis de riesgos}{chapter.3}% 35
+\BOOKMARK [0][-]{chapter.4}{Tecnologías}{}% 36
+\BOOKMARK [1][-]{section.4.1}{Arquitectura}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.1.1}{Capa de Presentación}{section.4.1}% 38
+\BOOKMARK [2][-]{subsection.4.1.2}{Capa\040de\040Negocio}{section.4.1}% 39
+\BOOKMARK [2][-]{subsection.4.1.3}{Capa\040de\040Datos}{section.4.1}% 40
+\BOOKMARK [1][-]{section.4.2}{Herramientas de Gestión y Desarrollo}{chapter.4}% 41
+\BOOKMARK [0][-]{chapter.5}{Metodología}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Desarrollo\040incremental}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.2}{Iteración 0: Búsqueda de información sobre el dominio}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.3}{Iteración 1: Sistema de captura de información}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.3.1}{Especificación y análisis de requisitos}{section.5.3}% 46
+\BOOKMARK [2][-]{subsection.5.3.2}{Diseño e implementación}{section.5.3}% 47
+\BOOKMARK [1][-]{section.5.4}{Iteración 2: Sistema para el almacenamiento de la información}{chapter.5}% 48
+\BOOKMARK [2][-]{subsection.5.4.1}{Especificación y análisis de requisitos}{section.5.4}% 49
+\BOOKMARK [2][-]{subsection.5.4.2}{Diseño e implementación}{section.5.4}% 50
+\BOOKMARK [1][-]{section.5.5}{Iteración 3: Comunicar aplicación con servidor}{chapter.5}% 51
+\BOOKMARK [2][-]{subsection.5.5.1}{Especificación y análisis de requisitos}{section.5.5}% 52
+\BOOKMARK [2][-]{subsection.5.5.2}{Diseño e implementación}{section.5.5}% 53
+\BOOKMARK [1][-]{section.5.6}{Iteración 4: Implementación de la Inteligencia Artificial}{chapter.5}% 54
+\BOOKMARK [2][-]{subsection.5.6.1}{Especificación y análisis de requisitos}{section.5.6}% 55
+\BOOKMARK [1][-]{section.5.7}{Iteración 5: Implementación online de los algoritmos}{chapter.5}% 56
+\BOOKMARK [2][-]{subsection.5.7.1}{Especificación y análisis de requisitos}{section.5.7}% 57
+\BOOKMARK [2][-]{subsection.5.7.2}{Diseño e implementación}{section.5.7}% 58
+\BOOKMARK [1][-]{section.5.8}{Pruebas}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.8.1}{Prueba\040unitarias}{section.5.8}% 60
+\BOOKMARK [2][-]{subsection.5.8.2}{Pruebas de integración}{section.5.8}% 61
+\BOOKMARK [2][-]{subsection.5.8.3}{Pruebas\040end\040to\040end\040\(e2e\)}{section.5.8}% 62
+\BOOKMARK [2][-]{subsection.5.8.4}{Cobertura}{section.5.8}% 63
+\BOOKMARK [0][-]{chapter.6}{Análisis y tratamiento de datos}{}% 64
+\BOOKMARK [1][-]{section.6.1}{Tratamiento\040de\040los\040datos}{chapter.6}% 65
+\BOOKMARK [2][-]{subsection.6.1.1}{Variables\040de\040texto}{section.6.1}% 66
+\BOOKMARK [2][-]{subsection.6.1.2}{Variables categóricas}{section.6.1}% 67
+\BOOKMARK [2][-]{subsection.6.1.3}{Valores\040Nulos}{section.6.1}% 68
+\BOOKMARK [2][-]{subsection.6.1.4}{Transformación de las características}{section.6.1}% 69
+\BOOKMARK [2][-]{subsection.6.1.5}{Estandarizar\040los\040datos}{section.6.1}% 70
+\BOOKMARK [1][-]{section.6.2}{Selección de algoritmos}{chapter.6}% 71
+\BOOKMARK [1][-]{section.6.3}{Selección de hiperparámetros }{chapter.6}% 72
+\BOOKMARK [1][-]{section.6.4}{Selección de características}{chapter.6}% 73
+\BOOKMARK [0][-]{chapter.7}{Resultados}{}% 74
+\BOOKMARK [1][-]{section.7.1}{Datos\040agrupados\040por\040eventos}{chapter.7}% 75
+\BOOKMARK [1][-]{section.7.2}{Datos\040agrupados\040por\040usuarios}{chapter.7}% 76
+\BOOKMARK [1][-]{section.7.3}{Servicio de autenticación en línea}{chapter.7}% 77
+\BOOKMARK [0][-]{chapter.8}{Trabajo\040Futuro}{}% 78
+\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 79
+\BOOKMARK [0][-]{appendix.A}{REST\040API}{}% 80
+\BOOKMARK [1][-]{section.A.1}{Ruta Autenticación}{appendix.A}% 81
+\BOOKMARK [1][-]{section.A.2}{Ruta\040Usuarios}{appendix.A}% 82
+\BOOKMARK [1][-]{section.A.3}{Ruta\040Eventos}{appendix.A}% 83
+\BOOKMARK [1][-]{section.A.4}{Definición de los esquemas}{appendix.A}% 84
+\BOOKMARK [0][-]{appendix.B}{Manual de usuario de la aplicación móvil}{}% 85
+\BOOKMARK [1][-]{section.B.1}{Acceso a la aplicación}{appendix.B}% 86
+\BOOKMARK [1][-]{section.B.2}{Configuración de la aplicación}{appendix.B}% 87
+\BOOKMARK [1][-]{section.B.3}{Inicio\040de\040la\040prueba}{appendix.B}% 88
+\BOOKMARK [2][-]{subsection.B.3.1}{Desafíos}{section.B.3}% 89
+\BOOKMARK [2][-]{subsection.B.3.2}{Fin\040de\040la\040prueba}{section.B.3}% 90
+\BOOKMARK [0][-]{appendix*.74}{Bibliografía}{}% 91

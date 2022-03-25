@@ -1,0 +1,81 @@
+\chapter{Introducción}
+\label{chap:introducion}
+
+En este capítulo se expondrá una visión generalizada del proyecto, abordando la idea original del mismo, cómo surge y qué objetivos se pretenden conseguir con la realización de este.
+
+\section{Motivación}
+Las preocupaciones sobre la seguridad informática han estado presentes desde el origen de la informática. Hoy en día el uso de ordenadores y portátiles ha perdido parte de su protagonismo, debido al creciente uso de los  teléfonos inteligentes.
+
+Según un estudio de Eurostat\footnote{Oficina Europea de Estadística}~\cite{eurostat} en 2018, un 75\% de la población de la Unión Europea emplea el \textit{smartphone} para uso personal. Además, un 28\% indicó que aceptan los permisos de acceso a datos personales requeridos por las aplicaciones pero, sin embargo, menos de la mitad disponen de una aplicación relacionada con la seguridad.
+
+Por otra parte, la seguridad que ofrecen dichos dispositivos frente a robos o pérdidas es únicamente una pequeña barrera como un patrón o un \textit{PIN}\footnote{Personal Identification Number}. En la que la mayoría de los casos, por el factor humano, no es una medida de seguridad robusta, ya sea por el uso de patrones simples o por el uso de información personal para la creación de dicho \textit{PIN}.
+
+Por estos motivos, surge la necesidad de implementar sistemas que ofrezcan una mayor seguridad. En los \textit{smartphones} los sensores biométricos como el reconocimiento facial o el de huella dactilar, son algunos de ellos. Estos sistemas de seguridad pueden llegar a ser más seguros que una contraseña, porque la verificación de la identidad se realiza mediante un rasgo o característica propia que no necesita ser recordada.
+
+Todos estos sistemas funcionan correctamente cuando se trata de iniciar una sesión, pero son totalmente vulnerables ante un ataque cuando la sesión está abierta. Esto es debido a que los mecanismos mencionados solo autentican al usuario en un momento concreto, normalmente al inicio de la sesión, y mientras esta permanezca abierta no se le solicitará una nueva autenticación.
+ 
+Debido a estos factores, surge la motivación de plantear un sistema de monitorización continua basado en el comportamiento del usuario frente al dispositivo.  De este modo, si el sistema detecta un comportamiento anómalo, podría solicitar al usuario que se verificara, utilizando para ello un nuevo método de autenticación distinto al original (por ejemplo, un código enviado al móvil) o advertir al administrador del sistema para que comprobase el incidente.
+
+
+El trabajo que se ha realizado en este proyecto no pretende ser un mecanismo de autenticación que sustituya a los ya existentes, sino el de ofrecer un segundo factor de autenticación continuo y transparente para el usuario.
+
+La realización de este proyecto incluye un estudio para comprobar la viabilidad  de la autenticación de un conjunto de usuarios mediante su comportamiento frente al uso de una aplicación móvil. Por ello, el proyecto se llevará a cabo en un entorno controlado, empleando una aplicación creada específicamente para el proyecto, con el objetivo de obtener los eventos generados por los usuarios. Aplicando diferentes técnicas de Inteligencia Artificial sobre los eventos capturados, podremos encontrar patrones que permitan autenticar al usuario.
+
+
+\section{Objetivos}
+El proyecto debe cumplir los siguientes objetivos, para garantizar la calidad y funcionalidad del mismo:
+
+ \begin{enumerate}
+    
+\item Implementación de una aplicación móvil que permita la captura de eventos por parte del usuario para su posterior envío.
+    \begin{itemize}
+        
+	\item Seleccionar un \textit{framework} de desarrollo orientado a dispositivos móviles que disponga de soporte multiplataforma para múltples sistemas operativos.
+        
+        \item Analizar y seleccionar los eventos que puedan ser más característicos a la hora de identificar a un usuario.
+        
+    \end{itemize}
+
+\item Implementación de un servidor que permita la conexión con la aplicación creada para guardar los eventos generados y su posterior acceso.
+
+    \begin{itemize}
+        \item Seleccionar una herramienta de desarrollo versátil y con un bajo consumo de recursos.
+        
+        \item Seleccionar una base de datos que permita trabajar con grandes volúmenes de datos cuya estructura pueda cambiar a lo largo del tiempo.
+        
+    \end{itemize}
+
+\item Realizar una fase de recogida de la información con los sistemas creados anteriormente, con el fin de obtener un conjunto de datos que contenga una muestra representativa de la población, es decir, personas de diferente edad y género.
+
+\item  Analizar y seleccionar técnicas de Inteligencia Artificial/Estadística a los datos recogidos para obtener una serie de características que sean identificativas de los usuarios y entrenar los diferentes algoritmos de aprendizaje con estas.
+
+\item Implementar un servicio de autenticación en línea que permita recibir eventos generados por un usuario y obtenga una predicción de la legitimidad de dicho usuario.
+\end{enumerate}
+
+ 
+ 
+\section{Organización de la memoria}
+
+ 
+La memoria se estructura en base a una serie de capítulos:
+\begin{itemize}
+    \item \textbf{Fundamentos teóricos}: En este apartado se abordan los diferentes términos para comprender mejor el dominio del proyecto.
+    
+    \item \textbf{Estudios de alternativas}: En este capítulo se muestran algunas de las alternativas disponibles en el mercado y artículos encontrados relacionados con el tema que se trata en este proyecto.
+    
+    \item \textbf{Planificación y evaluación de costes}: En esta parte se exponen las fases en las que se dividió el proyecto, su realización, costes y riesgos.
+    
+    \item \textbf{Tecnologías}: En este capítulo se analizan las herramientas utilizadas para el desarrollo de la aplicación.
+    
+    \item \textbf{Metodología}: En esta parte se muestra la información relativa al desarrollo del proyecto.
+    
+    
+    \item \textbf{Análisis y tratamiento de datos}: En este apartado se muestra el núcleo del proyecto, donde se comentarán los procedimientos utilizados para la búsqueda de un modelo que se adecue a los objetivos del proyecto.
+    
+    \item \textbf{Resultados}: En este capítulo se mostrarán los resultados y conclusiones obtenidas a partir del procesamiento de los datos.
+    
+    \item \textbf{Trabajo futuro}: En este parte se postularán diversas opciones para continuar con el desarrollo del proyecto.
+    
+    \item \textbf{Conclusiones}: En el último apartado se comprobará el grado de cumplimiento de los objetivos y su impacto.
+    
+\end{itemize}
